@@ -1,0 +1,6 @@
+{
+  "name": "Stitch Carnival - Live AV Master Director",
+  "description": "Tactical stage director console for live cyber-theatrical audiovisual performances, neural puppet rigging, chaos synthesis, and crowd telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

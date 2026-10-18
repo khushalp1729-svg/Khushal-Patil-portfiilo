@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #121318;
+  --color-surface-dim: #121318;
+  --color-surface-bright: #38393f;
+  --color-surface-variant: #34343a;
+  --color-surface-container-lowest: #0d0e13;
+  --color-surface-container-low: #1a1b21;
+  --color-surface-container: #1e1f25;
+  --color-surface-container-high: #292a2f;
+  --color-surface-container-highest: #34343a;
+  
+  --color-primary: #f1ffef;
+  --color-on-primary: #003919;
+  --color-primary-container: #00ff87;
+  --color-on-primary-container: #007138;
+  --color-primary-fixed: #60ff98;
+  --color-primary-fixed-dim: #00e478;
+  --color-on-primary-fixed: #00210c;
+  --color-on-primary-fixed-variant: #005227;
+
+  --color-secondary: #d3fbff;
+  --color-on-secondary: #00363a;
+  --color-secondary-container: #00eefc;
+  --color-on-secondary-container: #00686f;
+  --color-secondary-fixed: #7df4ff;
+  --color-secondary-fixed-dim: #00dbe9;
+  --color-on-secondary-fixed: #002022;
+  --color-on-secondary-fixed-variant: #004f54;
+
+  --color-tertiary: #fffafb;
+  --color-on-tertiary: #490080;
+  --color-tertiary-container: #eed6ff;
+  --color-on-tertiary-container: #8830d6;
+  --color-tertiary-fixed: #f0dbff;
+  --color-tertiary-fixed-dim: #ddb7ff;
+  --color-on-tertiary-fixed: #2c0051;
+  --color-on-tertiary-fixed-variant: #6900b3;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-outline: #849585;
+  --color-outline-variant: #3b4b3d;
+  --color-on-surface: #e3e1e9;
+  --color-on-surface-variant: #b9cbb9;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.375rem;
+  --spacing-space-md: 0.75rem;
+  --spacing-space-lg: 1.25rem;
+  --spacing-space-xl: 2rem;
+  --spacing-margin: 1rem;
+  --spacing-gutter: 0.75rem;
+
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-headline-xl: "Space Grotesk", sans-serif;
+  --font-telemetry-sm: "JetBrains Mono", monospace;
+  --font-telemetry-md: "JetBrains Mono", monospace;
+  --font-telemetry-lg: "JetBrains Mono", monospace;
+  --font-label-caps: "JetBrains Mono", monospace;
+  --font-body-sm: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .font-label-caps {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .font-telemetry-sm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+  .font-telemetry-md {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+  .font-telemetry-lg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+  }
+  .font-headline-md {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .font-headline-lg {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .font-body-md {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0e13;
+}
+::-webkit-scrollbar-thumb {
+  background: #292a2f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4b3d;
+}
+
+/* Glitch pulse and scanlines */
+@keyframes crt-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.crt-scanline {
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.08) 50%, rgba(255,255,255,0));
+  animation: crt-scan 4s linear infinite;
+}
